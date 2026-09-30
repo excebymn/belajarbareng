@@ -28,9 +28,9 @@ JavaScript punya dua cara utama membuat variable: `let` dan `const`.
 Gunakan `let` untuk nilai yang **boleh berubah**.
 
 ```js
-let skor = 0
-skor = 10
-console.log(skor)
+let skor = 0;
+skor = 10;
+console.log(skor);
 ```
 
 Pada contoh di atas, `skor` dibuat dengan nilai awal `0`, lalu diganti menjadi `10`. Kata `let` hanya ditulis satu kali, yaitu saat variable dibuat. Untuk mengganti nilainya, cukup tulis nama variable dan nilai baru. Fungsi `console.log()` menampilkan nilai di console browser.
@@ -40,24 +40,24 @@ Pada contoh di atas, `skor` dibuat dengan nilai awal `0`, lalu diganti menjadi `
 Gunakan `const` untuk nilai yang **tidak akan berubah**.
 
 ```js
-const pi = 3.14
+const pi = 3.14;
 ```
 
 Jika nilai `const` diubah, JavaScript akan menampilkan error.
 
 #### Perbedaan `let` dan `const`
 
-| | `let` | `const` |
-|---|---|---|
-| Nilai boleh diganti | Ya | Tidak |
-| Cocok untuk | Nilai yang berubah | Nilai yang tetap |
+|                     | `let`              | `const`          |
+| ------------------- | ------------------ | ---------------- |
+| Nilai boleh diganti | Ya                 | Tidak            |
+| Cocok untuk         | Nilai yang berubah | Nilai yang tetap |
 
 ```js
-let a = 1
-a = 2          // aman
+let a = 1;
+a = 2; // aman
 
-const b = 1
-b = 2          // error
+const b = 1;
+b = 2; // error
 ```
 
 > **Ringkasan:** variable menyimpan nilai. Pakai `let` jika nilainya akan berubah, pakai `const` jika nilainya tetap.
@@ -66,16 +66,16 @@ b = 2          // error
 
 **Tipe data** menunjukkan jenis nilai yang disimpan di dalam sebuah variable. Tiga tipe data yang paling sering dipakai adalah string, number, dan boolean.
 
-| Tipe | Kegunaan | Contoh |
-|---|---|---|
-| String | Teks | `'Bima'` |
-| Number | Angka | `15` |
+| Tipe    | Kegunaan         | Contoh          |
+| ------- | ---------------- | --------------- |
+| String  | Teks             | `'Rusdi'`       |
+| Number  | Angka            | `15`            |
 | Boolean | Benar atau salah | `true`, `false` |
 
 ```js
-const nama = 'Bima'      // string
-const umur = 15          // number
-const lulus = true       // boolean
+const nama = "Rusdi"; // string
+const umur = 15; // number
+const lulus = true; // boolean
 ```
 
 Teks (string) selalu ditulis di antara tanda kutip, sedangkan angka ditulis tanpa tanda kutip. Boolean hanya memiliki dua kemungkinan nilai: `true` atau `false`.
@@ -87,9 +87,9 @@ Teks (string) selalu ditulis di antara tanda kutip, sedangkan angka ditulis tanp
 **Array** adalah kumpulan beberapa nilai yang disimpan dalam satu variable. Array ditulis dengan tanda kurung siku `[ ]`, dan setiap isinya dipisahkan dengan koma.
 
 ```js
-const buah = ['apel', 'jeruk', 'mangga']
-console.log(buah[0])      // apel
-console.log(buah[2])      // mangga
+const buah = ["apel", "jeruk", "mangga"];
+console.log(buah[0]); // apel
+console.log(buah[2]); // mangga
 ```
 
 Setiap isi array punya nomor urut yang disebut **index**. Index dimulai dari **0**, bukan 1. Jadi `buah[0]` adalah isi pertama.
@@ -97,8 +97,8 @@ Setiap isi array punya nomor urut yang disebut **index**. Index dimulai dari **0
 Beberapa hal yang sering dilakukan pada array:
 
 ```js
-buah.push('pisang')          // menambah isi di bagian akhir
-console.log(buah.length)     // 4, jumlah isi array
+buah.push("pisang"); // menambah isi di bagian akhir
+console.log(buah.length); // 4, jumlah isi array
 ```
 
 > **Ringkasan:** array menyimpan banyak nilai berurutan. Index dimulai dari 0. `push` menambah isi, `length` menghitung jumlah isi.
@@ -108,9 +108,9 @@ console.log(buah.length)     // 4, jumlah isi array
 **Object** adalah kumpulan data yang berpasangan antara **nama** dan **nilai**. Object ditulis dengan tanda kurung kurawal `{ }`. Object cocok untuk menggambarkan satu benda yang punya beberapa sifat, misalnya seorang siswa.
 
 ```js
-const siswa = { nama: 'Ayu', umur: 15 }
-console.log(siswa.nama)      // Ayu
-console.log(siswa.umur)      // 15
+const siswa = { nama: "Gatot", umur: 15 };
+console.log(siswa.nama); // Gatot
+console.log(siswa.umur); // 15
 ```
 
 Nilai di dalam object diambil dengan menulis nama object, tanda titik, lalu nama sifatnya.
@@ -118,7 +118,7 @@ Nilai di dalam object diambil dengan menulis nama object, tanda titik, lalu nama
 Nilai di dalam object juga bisa diubah:
 
 ```js
-siswa.umur = 16
+siswa.umur = 16;
 ```
 
 Perubahan ini diperbolehkan walaupun `siswa` dibuat dengan `const`. Yang dikunci oleh `const` adalah variable-nya, sedangkan isi di dalam object tetap bisa diubah.
@@ -131,11 +131,11 @@ Perubahan ini diperbolehkan walaupun `siswa` dibuat dengan `const`. Yang dikunci
 
 ```js
 function sapa() {
-  console.log('Halo!')
+  console.log("Halo!");
 }
 
-sapa()      // Halo!
-sapa()      // Halo!
+sapa(); // Halo!
+sapa(); // Halo!
 ```
 
 Function dibuat dengan kata `function`, diikuti nama, tanda kurung `( )`, dan isi di dalam `{ }`. Function baru dijalankan saat **dipanggil** dengan menulis namanya diikuti tanda kurung.
@@ -145,12 +145,13 @@ Function dibuat dengan kata `function`, diikuti nama, tanda kurung `( )`, dan is
 Function bisa menerima data dari luar. Tempat penerimanya di dalam function disebut **parameter**, sedangkan nilai yang dikirim saat memanggil function disebut **argument**.
 
 ```js
-function sapa(nama) {           // nama = parameter
-  console.log('Halo, ' + nama)
+function sapa(nama) {
+  // nama = parameter
+  console.log("Halo, " + nama);
 }
 
-sapa('Bima')                    // 'Bima' = argument
-sapa('Ayu')
+sapa("Rusdi"); // 'Rusdi' = argument
+sapa("Gatot");
 ```
 
 Setiap kali dipanggil dengan argument berbeda, hasilnya ikut berbeda.
@@ -161,11 +162,11 @@ Function bisa mengembalikan hasil menggunakan `return`. Hasil tersebut bisa disi
 
 ```js
 function tambah(a, b) {
-  return a + b
+  return a + b;
 }
 
-const hasil = tambah(2, 3)
-console.log(hasil)              // 5
+const hasil = tambah(2, 3);
+console.log(hasil); // 5
 ```
 
 > **Ringkasan:** function adalah blok kode bernama yang dipanggil kapan saja. Parameter menerima data, `return` mengembalikan hasil.
@@ -176,35 +177,35 @@ console.log(hasil)              // 5
 
 #### Operator aritmatika
 
-| Operator | Fungsi | Contoh | Hasil |
-|---|---|---|---|
-| `+` | Tambah | `10 + 5` | `15` |
-| `-` | Kurang | `10 - 5` | `5` |
-| `*` | Kali | `10 * 5` | `50` |
-| `/` | Bagi | `10 / 5` | `2` |
+| Operator | Fungsi | Contoh   | Hasil |
+| -------- | ------ | -------- | ----- |
+| `+`      | Tambah | `10 + 5` | `15`  |
+| `-`      | Kurang | `10 - 5` | `5`   |
+| `*`      | Kali   | `10 * 5` | `50`  |
+| `/`      | Bagi   | `10 / 5` | `2`   |
 
 #### Increment dan decrement
 
 `++` menambah nilai sebanyak 1, dan `--` menguranginya sebanyak 1.
 
 ```js
-let n = 0
-n++        // n menjadi 1
-n--        // n kembali menjadi 0
+let n = 0;
+n++; // n menjadi 1
+n--; // n kembali menjadi 0
 ```
 
 #### Operator perbandingan
 
 Operator perbandingan membandingkan dua nilai dan menghasilkan boolean (`true` atau `false`).
 
-| Operator | Arti | Contoh | Hasil |
-|---|---|---|---|
-| `===` | Sama dengan | `5 === 5` | `true` |
-| `!==` | Tidak sama dengan | `5 !== 3` | `true` |
-| `>` | Lebih besar | `5 > 3` | `true` |
-| `<` | Lebih kecil | `5 < 3` | `false` |
-| `>=` | Lebih besar atau sama | `5 >= 5` | `true` |
-| `<=` | Lebih kecil atau sama | `5 <= 3` | `false` |
+| Operator | Arti                  | Contoh    | Hasil   |
+| -------- | --------------------- | --------- | ------- |
+| `===`    | Sama dengan           | `5 === 5` | `true`  |
+| `!==`    | Tidak sama dengan     | `5 !== 3` | `true`  |
+| `>`      | Lebih besar           | `5 > 3`   | `true`  |
+| `<`      | Lebih kecil           | `5 < 3`   | `false` |
+| `>=`     | Lebih besar atau sama | `5 >= 5`  | `true`  |
+| `<=`     | Lebih kecil atau sama | `5 <= 3`  | `false` |
 
 > **Catatan:** satu tanda sama dengan (`=`) berarti mengisi nilai, sedangkan tiga tanda sama dengan (`===`) berarti membandingkan.
 
@@ -218,7 +219,7 @@ Operator perbandingan membandingkan dua nilai dan menghasilkan boolean (`true` a
 
 ```js
 if (umur >= 17) {
-  console.log('Boleh')
+  console.log("Boleh");
 }
 ```
 
@@ -230,11 +231,11 @@ Kode di dalam `{ }` hanya dijalankan jika kondisi di dalam `( )` bernilai `true`
 
 ```js
 if (nilai >= 80) {
-  console.log('Bagus')
+  console.log("Bagus");
 } else if (nilai >= 60) {
-  console.log('Lumayan')
+  console.log("Lumayan");
 } else {
-  console.log('Belajar lagi')
+  console.log("Belajar lagi");
 }
 ```
 
@@ -244,16 +245,19 @@ Kondisi dicek dari atas ke bawah. Begitu ada yang benar, bagian itu dijalankan d
 
 Ketiganya dipakai untuk menggabungkan atau membalik kondisi.
 
-| Operator | Nama | Arti |
-|---|---|---|
-| `&&` | Dan | Dua-duanya harus benar |
-| `\|\|` | Atau | Salah satu benar sudah cukup |
-| `!` | Bukan | Membalik nilai |
+| Operator | Nama  | Arti                         |
+| -------- | ----- | ---------------------------- |
+| `&&`     | Dan   | Dua-duanya harus benar       |
+| `\|\|`   | Atau  | Salah satu benar sudah cukup |
+| `!`      | Bukan | Membalik nilai               |
 
 ```js
-if (umur >= 17 && punyaKTP) { }
-if (hariIni === 'Sabtu' || hariIni === 'Minggu') { }
-if (!lulus) { }
+if (umur >= 17 && punyaKTP) {
+}
+if (hariIni === "Sabtu" || hariIni === "Minggu") {
+}
+if (!lulus) {
+}
 ```
 
 > **Ringkasan:** `if`, `else if`, dan `else` memilih kode yang dijalankan berdasarkan kondisi. Gabungkan kondisi dengan `&&`, `||`, dan `!`.
@@ -268,11 +272,11 @@ if (!lulus) { }
 
 Sebuah file `.vue` terdiri dari tiga bagian:
 
-| Bagian | Isi |
-|---|---|
+| Bagian           | Isi                                |
+| ---------------- | ---------------------------------- |
 | `<script setup>` | Kode JavaScript: data dan function |
-| `<template>` | Tampilan dalam bentuk HTML |
-| `<style>` | Gaya tampilan dalam bentuk CSS |
+| `<template>`     | Tampilan dalam bentuk HTML         |
+| `<style>`        | Gaya tampilan dalam bentuk CSS     |
 
 ```vue
 <script setup>
@@ -313,7 +317,7 @@ Semua tag HTML yang sudah kamu kenal bisa dipakai di sini.
 
 ```vue
 <script setup>
-const nama = 'Bima'
+const nama = "Rusdi";
 </script>
 
 <template>
@@ -321,7 +325,7 @@ const nama = 'Bima'
 </template>
 ```
 
-Saat halaman tampil, `{{ nama }}` diganti dengan isi variable `nama`, sehingga hasilnya adalah: **Halo, Bima**.
+Saat halaman tampil, `{{ nama }}` diganti dengan isi variable `nama`, sehingga hasilnya adalah: **Halo, Rusdi**.
 
 > **Ringkasan:** `{{ }}` menampilkan nilai variable di dalam template.
 
@@ -331,11 +335,11 @@ Saat halaman tampil, `{{ nama }}` diganti dengan isi variable `nama`, sehingga h
 
 ```vue
 <script setup>
-const gambar = 'https://picsum.photos/100'
+const gambar = "https://picsum.photos/100";
 </script>
 
 <template>
-  <img :src="gambar">
+  <img :src="gambar" />
 </template>
 ```
 
@@ -371,10 +375,10 @@ Perhatikan contoh berikut, yang memakai variable biasa:
 
 ```vue
 <script setup>
-let nama = 'Bima'
+let nama = "Rusdi";
 
 function ganti() {
-  nama = 'Ayu'
+  nama = "Gatot";
 }
 </script>
 
@@ -384,7 +388,7 @@ function ganti() {
 </template>
 ```
 
-Saat tombol diklik, nilai `nama` di JavaScript memang berubah menjadi `'Ayu'`, tetapi tulisan di halaman tetap `Bima`. Penyebabnya, Vue tidak memantau variable biasa, sehingga tidak tahu bahwa tampilan perlu diperbarui.
+Saat tombol diklik, nilai `nama` di JavaScript memang berubah menjadi `'Gatot'`, tetapi tulisan di halaman tetap `Rusdi`. Penyebabnya, Vue tidak memantau variable biasa, sehingga tidak tahu bahwa tampilan perlu diperbarui.
 
 > **Ringkasan:** variable biasa yang berubah tidak membuat tampilan ikut berubah.
 
@@ -395,12 +399,12 @@ Saat tombol diklik, nilai `nama` di JavaScript memang berubah menjadi `'Ayu'`, t
 `ref` harus diimpor dari Vue terlebih dahulu:
 
 ```js
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const nama = ref('Bima')
+const nama = ref("Rusdi");
 ```
 
-Nilai di dalam tanda kurung, yaitu `'Bima'`, adalah **nilai awal**.
+Nilai di dalam tanda kurung, yaitu `'Rusdi'`, adalah **nilai awal**.
 
 > **Ringkasan:** `ref` adalah data yang perubahannya dipantau Vue. Impor dari `'vue'`, lalu isi nilai awalnya di dalam tanda kurung.
 
@@ -409,8 +413,8 @@ Nilai di dalam tanda kurung, yaitu `'Bima'`, adalah **nilai awal**.
 Nilai asli sebuah `ref` tersimpan di dalam properti `.value`. Karena itu, di dalam JavaScript, nilainya dibaca dan diubah lewat `.value`.
 
 ```js
-console.log(nama.value)      // Bima
-nama.value = 'Ayu'
+console.log(nama.value); // Rusdi
+nama.value = "Gatot";
 ```
 
 > **Ringkasan:** di dalam `<script>`, baca dan ubah `ref` lewat `.value`.
@@ -435,12 +439,12 @@ Contoh sebelumnya sekarang bisa diperbaiki dengan `ref`:
 
 ```vue
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const nama = ref('Bima')
+const nama = ref("Rusdi");
 
 function ganti() {
-  nama.value = 'Ayu'
+  nama.value = "Gatot";
 }
 </script>
 
@@ -450,7 +454,7 @@ function ganti() {
 </template>
 ```
 
-Saat tombol diklik, `nama.value` berubah, dan tulisan di halaman langsung ikut berganti menjadi **Ayu**.
+Saat tombol diklik, `nama.value` berubah, dan tulisan di halaman langsung ikut berganti menjadi **Gatot**.
 
 > **Ringkasan:** `ref` membuat tampilan ikut berubah otomatis saat datanya berubah.
 
@@ -478,12 +482,12 @@ Untuk kode yang lebih panjang, kita membuat function di `<script>` lalu memanggi
 
 ```vue
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const jumlah = ref(0)
+const jumlah = ref(0);
 
 function tambah() {
-  jumlah.value++
+  jumlah.value++;
 }
 </script>
 
@@ -504,19 +508,19 @@ Function yang dipanggil dari event juga bisa menerima argument.
 ```vue
 <script setup>
 function sapa(nama) {
-  alert('Halo, ' + nama)
+  alert("Halo, " + nama);
 }
 </script>
 
 <template>
-  <button @click="sapa('Bima')">Sapa Bima</button>
-  <button @click="sapa('Ayu')">Sapa Ayu</button>
+  <button @click="sapa('Rusdi')">Sapa Rusdi</button>
+  <button @click="sapa('Gatot')">Sapa Gatot</button>
 </template>
 ```
 
 Kedua tombol memanggil function yang sama, tetapi dengan argument berbeda, sehingga hasilnya berbeda.
 
-> **Ringkasan:** kirim data ke function dengan menulis argument di dalam tanda kurung, misalnya `@click="sapa('Bima')"`.
+> **Ringkasan:** kirim data ke function dengan menulis argument di dalam tanda kurung, misalnya `@click="sapa('Rusdi')"`.
 
 ---
 
@@ -567,9 +571,9 @@ Dengan menggabungkan `ref`, event, dan `v-if`, tampilan bisa berubah setiap kali
 
 ```vue
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const nilai = ref(50)
+const nilai = ref(50);
 </script>
 
 <template>
@@ -596,7 +600,7 @@ Setiap klik menambah `nilai` sebanyak 10. Vue lalu mengecek ulang kondisi di baw
 
 ```vue
 <script setup>
-const buahBuahan = ['apel', 'jeruk', 'mangga']
+const buahBuahan = ["apel", "jeruk", "mangga"];
 </script>
 
 <template>
@@ -604,7 +608,7 @@ const buahBuahan = ['apel', 'jeruk', 'mangga']
 </template>
 ```
 
-Penulisan `buah in buahBuahan` dibaca: *untuk setiap isi di `buahBuahan`, ambil satu per satu dan beri nama `buah`*. Nama `buah` bebas ditentukan, karena hanya menjadi label untuk isi yang sedang diproses pada putaran itu.
+Penulisan `buah in buahBuahan` dibaca: _untuk setiap isi di `buahBuahan`, ambil satu per satu dan beri nama `buah`_. Nama `buah` bebas ditentukan, karena hanya menjadi label untuk isi yang sedang diproses pada putaran itu.
 
 Karena array berisi tiga item, elemen `<li>` dibuat sebanyak tiga kali.
 
@@ -642,12 +646,12 @@ Agar daftar bisa berubah dan tampilan ikut diperbarui, array dibungkus dengan `r
 
 ```vue
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const buahBuahan = ref(['apel', 'jeruk'])
+const buahBuahan = ref(["apel", "jeruk"]);
 
 function tambah() {
-  buahBuahan.value.push('mangga')
+  buahBuahan.value.push("mangga");
 }
 </script>
 
@@ -687,16 +691,16 @@ Di `<script>` array diakses lewat `.value`, sedangkan di `<template>` cukup ditu
 ### 7.a `<input>` dan `type`
 
 ```html
-<input type="text">
-<input type="number">
-<input type="date">
+<input type="text" />
+<input type="number" />
+<input type="date" />
 ```
 
-| `type` | Bentuk input |
-|---|---|
-| `text` | Kolom teks biasa |
-| `number` | Kolom angka |
-| `date` | Pemilih tanggal |
+| `type`   | Bentuk input     |
+| -------- | ---------------- |
+| `text`   | Kolom teks biasa |
+| `number` | Kolom angka      |
+| `date`   | Pemilih tanggal  |
 
 Tidak perlu menghafal semua tipe. Cukup kenali yang paling sering dipakai.
 
@@ -707,7 +711,7 @@ Tidak perlu menghafal semua tipe. Cukup kenali yang paling sering dipakai.
 `placeholder` adalah teks petunjuk yang tampil samar di dalam input dan hilang saat pengguna mulai mengetik.
 
 ```html
-<input type="text" placeholder="Nama kamu">
+<input type="text" placeholder="Nama kamu" />
 ```
 
 > **Ringkasan:** `placeholder` memberi petunjuk isi input.
@@ -717,7 +721,7 @@ Tidak perlu menghafal semua tipe. Cukup kenali yang paling sering dipakai.
 `value` adalah isi dari sebuah input. Jika `value` ditulis langsung, isi tersebut menjadi nilai awal.
 
 ```html
-<input type="text" value="Bima">
+<input type="text" value="Rusdi" />
 ```
 
 > **Ringkasan:** `value` menentukan isi input.
@@ -727,7 +731,7 @@ Tidak perlu menghafal semua tipe. Cukup kenali yang paling sering dipakai.
 **Checkbox** adalah kotak centang untuk pilihan ya atau tidak. Atribut `checked` membuat kotak sudah tercentang sejak awal.
 
 ```html
-<input type="checkbox" checked> Setuju
+<input type="checkbox" checked /> Setuju
 ```
 
 > **Ringkasan:** `type="checkbox"` membuat kotak centang, `checked` membuatnya tercentang dari awal.
@@ -737,8 +741,8 @@ Tidak perlu menghafal semua tipe. Cukup kenali yang paling sering dipakai.
 **Radio** adalah pilihan yang hanya boleh dipilih satu dari beberapa. Radio yang memiliki `name` yang sama dianggap satu kelompok, sehingga memilih satu akan membatalkan pilihan lainnya.
 
 ```html
-<input type="radio" name="pilihan" value="A"> A
-<input type="radio" name="pilihan" value="B"> B
+<input type="radio" name="pilihan" value="A" /> A
+<input type="radio" name="pilihan" value="B" /> B
 ```
 
 Atribut `value` menentukan nilai yang dibawa oleh pilihan tersebut.
@@ -764,13 +768,13 @@ Dengan `v-model`, kita tidak perlu menulis kode terpisah untuk membaca isi input
 
 ```vue
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const nama = ref('')
+const nama = ref("");
 </script>
 
 <template>
-  <input v-model="nama">
+  <input v-model="nama" />
   <p>Halo, {{ nama }}</p>
 </template>
 ```
@@ -784,10 +788,10 @@ const nama = ref('')
 Selain dari input ke data, arah sebaliknya juga berlaku.
 
 ```vue
-<button @click="nama = 'Ayu'">Isi otomatis</button>
+<button @click="nama = 'Gatot'">Isi otomatis</button>
 ```
 
-Saat tombol diklik, `nama` diubah lewat kode, dan isi kolom input ikut berubah menjadi `Ayu`.
+Saat tombol diklik, `nama` diubah lewat kode, dan isi kolom input ikut berubah menjadi `Gatot`.
 
 > **Ringkasan:** mengubah data lewat kode juga mengubah isi input.
 
@@ -797,13 +801,13 @@ Untuk checkbox, `v-model` dihubungkan dengan data bertipe boolean. Nilainya `tru
 
 ```vue
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const setuju = ref(false)
+const setuju = ref(false);
 </script>
 
 <template>
-  <input type="checkbox" v-model="setuju"> Setuju
+  <input type="checkbox" v-model="setuju" /> Setuju
   <p v-if="setuju">Terima kasih</p>
 </template>
 ```
@@ -818,14 +822,14 @@ Untuk radio, semua pilihan dalam satu kelompok memakai `v-model` yang sama. Nila
 
 ```vue
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const jawaban = ref('')
+const jawaban = ref("");
 </script>
 
 <template>
-  <input type="radio" value="A" v-model="jawaban"> A
-  <input type="radio" value="B" v-model="jawaban"> B
+  <input type="radio" value="A" v-model="jawaban" /> A
+  <input type="radio" value="B" v-model="jawaban" /> B
   <p>Pilihanmu: {{ jawaban }}</p>
 </template>
 ```
@@ -844,7 +848,7 @@ Saat pilihan A dipilih, `jawaban` berisi `'A'`. Saat pilihan B dipilih, `jawaban
 
 ```html
 <form>
-  <input type="text">
+  <input type="text" />
   <button type="submit">Kirim</button>
 </form>
 ```
@@ -861,7 +865,7 @@ Di Vue, `@submit` menjalankan kode saat form dikirim. Secara bawaan, browser me-
 <form @submit.prevent="kirim">
 ```
 
-Dibaca: *saat form dikirim, cegah reload halaman, lalu jalankan function `kirim`.*
+Dibaca: _saat form dikirim, cegah reload halaman, lalu jalankan function `kirim`._
 
 > **Ringkasan:** `@submit.prevent="kirim"` menjalankan function `kirim` tanpa me-reload halaman.
 
@@ -872,7 +876,7 @@ Function yang dipanggil oleh `@submit` adalah tempat data form diproses.
 ```vue
 <script setup>
 function kirim() {
-  alert('Terkirim!')
+  alert("Terkirim!");
 }
 </script>
 
@@ -893,19 +897,19 @@ Form menjadi berguna ketika digabung dengan `v-model`, karena isi input sudah te
 
 ```vue
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const nama = ref('')
+const nama = ref("");
 
 function kirim() {
-  alert('Halo, ' + nama.value)
-  nama.value = ''
+  alert("Halo, " + nama.value);
+  nama.value = "";
 }
 </script>
 
 <template>
   <form @submit.prevent="kirim">
-    <input v-model="nama" placeholder="Nama">
+    <input v-model="nama" placeholder="Nama" />
     <button type="submit">Kirim</button>
   </form>
 </template>
@@ -921,20 +925,20 @@ Materi-materi sebelumnya bisa digabung menjadi satu aplikasi kecil: form untuk m
 
 ```vue
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const nama = ref('')
-const daftar = ref([])
+const nama = ref("");
+const daftar = ref([]);
 
 function kirim() {
-  daftar.value.push(nama.value)
-  nama.value = ''
+  daftar.value.push(nama.value);
+  nama.value = "";
 }
 </script>
 
 <template>
   <form @submit.prevent="kirim">
-    <input v-model="nama" placeholder="Nama">
+    <input v-model="nama" placeholder="Nama" />
     <button type="submit">Simpan</button>
   </form>
 
@@ -996,9 +1000,9 @@ Sebuah component dibuat seperti file `.vue` biasa. Berikut component `Counter` s
 ```vue
 <!-- components/Counter.vue -->
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const jumlah = ref(0)
+const jumlah = ref(0);
 </script>
 
 <template>
@@ -1017,7 +1021,7 @@ Untuk memakai component, kita **mengimpornya** di file yang membutuhkan, lalu me
 ```vue
 <!-- App.vue -->
 <script setup>
-import Counter from './components/Counter.vue'
+import Counter from "./components/Counter.vue";
 </script>
 
 <template>

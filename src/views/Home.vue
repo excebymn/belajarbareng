@@ -22,11 +22,12 @@ onMounted(() => { timer = setInterval(() => (idx.value = (idx.value + 1) % slide
 onBeforeUnmount(() => clearInterval(timer))
 </script>
 <template>
+  <div class="home">
   <div class="hero-band">
     <div class="wrap hero-grid">
       <div class="hero-text">
-        <h1 class="hero">Belajar webdev bareng kakak kelas.</h1>
-        <p class="lead">JavaScript, Vue, Git, sampai backend. Baca modulnya, salin kodenya, langsung praktik.</p>
+        <h1 class="hero">Belajar webdev bareng bareng.</h1>
+        <p class="lead">JavaScript, Vue, Git, sampai backend. Biar kita #selangkahlebihmaju.</p>
       </div>
       <div class="slides">
         <img v-for="(s, i) in slides" :key="s.src" :src="s.src" :alt="s.alt" :class="{ on: i === idx }" :aria-hidden="i !== idx" width="720" height="720" />
@@ -47,4 +48,5 @@ onBeforeUnmount(() => clearInterval(timer))
     </div>
     <p v-if="!hasil.length" class="note">Tidak ada pertemuan yang cocok.</p>
   </section>
+  </div>
 </template>

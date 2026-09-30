@@ -47,7 +47,7 @@ function logout() { keluar(); router.push('/pengajar') }
   </nav>
   <main>
     <RouterView v-slot="{ Component, route: r }">
-      <Transition name="page" mode="out-in"><component :is="Component" :key="r.path.split('/pertemuan/')[0] + (r.path.includes('/pertemuan/') ? '/m' : r.path)" /></Transition>
+      <Transition name="page" mode="out-in"><component :is="Component" :key="r.path" /></Transition>
     </RouterView>
   </main>
 </template>
