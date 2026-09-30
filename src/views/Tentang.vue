@@ -1,15 +1,58 @@
 <template>
   <section class="wrap narrow">
-    <nav class="crumb"><RouterLink to="/">Beranda</RouterLink> / <b>Tentang</b></nav>
-    <h1 class="hero sm">Tentang belajarbareng</h1>
-    <div class="prose">
-      <p>Kami <strong>Bima</strong> dan <strong>Abid</strong>, kelas 12, yang mengajar adik-adik kelas 11 seputar <strong>web development</strong>. Website ini adalah kumpulan modul yang kami pakai buat ngajar.</p>
-      <h2>Yang kami ajarkan</h2>
-      <p>Materinya luas, dan bertahap dari dasar ke yang lebih dalam:</p>
-      <ul><li>JavaScript dasar</li><li>Framework, mulai dari Vue</li><li>Git dan GitHub</li><li>Backend: server, API, dan database</li></ul>
-      <h2>Cara pakai</h2>
-      <p>Tiap pertemuan punya modul untuk murid, bentuknya seperti buku pelajaran: penjelasan, contoh kode, dan ringkasan. Kodenya bisa langsung disalin. Pertemuan yang belum ada modulnya ditandai <em>Belum ada materi</em>.</p>
-      <p>Bagian pengajar berisi contekan live coding kami, jadi tidak terbuka untuk umum.</p>
-    </div>
+    <nav class="crumb">
+      <RouterLink to="/">Beranda</RouterLink> / <b>Tentang</b>
+    </nav>
+
+<h1 class="hero sm">Tentang BelajarBareng</h1>
+
+<div class="prose">
+  <p>
+    <strong>BelajarBareng</strong> merupakan platform pembelajaran yang
+    dirancang untuk membantu siswa mempelajari <strong>web development</strong>
+    secara bertahap, mulai dari konsep dasar hingga materi yang lebih lanjut.
+  </p>
+
+  <h2>Materi Pembelajaran</h2>
+  <p>
+    Materi disusun berdasarkan tahapan pembelajaran dan mencakup beberapa
+    topik utama, antara lain:
+  </p>
+
+  <ul>
+    <li>JavaScript dasar</li>
+    <li>Framework web, khususnya Vue</li>
+    <li>Git dan GitHub</li>
+    <li>Backend, termasuk server, API, dan database</li>
+  </ul>
+
+  <h2>Struktur Pembelajaran</h2>
+  <p>
+    Setiap pertemuan memiliki modul pembelajaran yang berisi penjelasan
+    materi, contoh kode, dan ringkasan. Modul dirancang agar dapat digunakan
+    sebagai panduan belajar sekaligus referensi saat melakukan praktik.
+  </p>
+
+  <p>
+    Contoh kode yang tersedia dapat langsung digunakan sebagai bahan
+    pembelajaran. Pertemuan yang belum memiliki modul akan ditandai dengan
+    keterangan <em>Belum ada materi</em>.
+  </p>
+
+  <h2>Untuk Pengajar</h2>
+  <p>
+    Tersedia pula bagian khusus pengajar yang berisi catatan dan referensi
+    untuk mendukung kegiatan <strong>live coding</strong>. Bagian ini
+    bersifat internal dan tidak tersedia untuk akses umum.
+  </p>
+
+  <h2>Kontak</h2>
+  <p>
+    Untuk pertanyaan, saran, atau informasi lebih lanjut, dapat menghubungi
+    melalui Instagram <strong>@excebymn</strong>.
+  </p>
+</div>
+
+
   </section>
 </template>
