@@ -36,8 +36,8 @@ Catatan: komentar di dalam kode diletakkan tepat di bawah baris yang dijelaskan.
 - **Apa itu variable:** tempat menyimpan nilai dan diberi nama.
 
 ```js
-let nama = 'Joko'
-// membuat variable bernama "nama" yang isinya 'Joko'
+let nama = 'Adi'
+// membuat variable bernama "nama" yang isinya 'Adi'
 console.log(nama)
 // menampilkan isi variable "nama" di console
 ```
@@ -74,7 +74,7 @@ b = 2
 - **String:** teks.
 
 ```js
-const nama = 'Joko'
+const nama = 'Adi'
 // teks selalu diapit tanda kutip
 ```
 
@@ -103,11 +103,11 @@ console.log(buah[0])
 // ambil isi urutan pertama (index 0), hasilnya 'apel'
 ```
 
-- **MenJokoh dan menghitung isi:**
+- **Menambah dan menghitung isi:**
 
 ```js
 buah.push('pisang')
-// push = tJokoh item baru di akhir array
+// push = tambah item baru di akhir array
 console.log(buah.length)
 // length = jumlah isi array, hasilnya 4
 ```
@@ -117,10 +117,10 @@ console.log(buah.length)
 - **Apa itu object:** kumpulan data berpasangan nama dan nilai.
 
 ```js
-const siswa = { nama: 'Rusdi', umur: 15 }
+const siswa = { nama: 'Budi', umur: 15 }
 // object ditulis dengan { }, isinya pasangan "nama: nilai"
 console.log(siswa.nama)
-// ambil nilai lewat titik, hasilnya 'Rusdi'
+// ambil nilai lewat titik, hasilnya 'Budi'
 ```
 
 - **Mengubah isi object:**
@@ -151,18 +151,18 @@ function sapa(nama) {
 // "nama" = parameter, tempat menampung nilai yang dikirim
   console.log('Halo, ' + nama)
 }
-sapa('Joko')
-// 'Joko' = argument, nilai yang dikirim ke parameter "nama"
+sapa('Adi')
+// 'Adi' = argument, nilai yang dikirim ke parameter "nama"
 ```
 
 - **`return`:** mengembalikan hasil dari function.
 
 ```js
-function tJokoh(a, b) {
+function tambah(a, b) {
   return a + b
   // return = kirim hasil keluar dari function
 }
-const hasil = tJokoh(2, 3)
+const hasil = tambah(2, 3)
 // hasil function disimpan ke variable "hasil", isinya 5
 ```
 
@@ -172,7 +172,7 @@ const hasil = tJokoh(2, 3)
 
 ```js
 console.log(10 + 5, 10 - 5, 10 * 5, 10 / 5)
-// tJokoh, kurang, kali, bagi, hasilnya 15, 5, 50, 2
+// tambah, kurang, kali, bagi, hasilnya 15, 5, 50, 2
 ```
 
 - **Increment dan decrement:** `++` dan `--`
@@ -268,7 +268,7 @@ if (!lulus) { }
 
 ```vue
 <script setup>
-const nama = 'Joko'
+const nama = 'Adi'
 // data dibuat di script
 </script>
 
@@ -284,14 +284,14 @@ const nama = 'Joko'
 
 ```vue
 <script setup>
-const gJokor = 'https://picsum.photos/100'
-// alamat gJokor disimpan di variable
+const gambar = 'https://picsum.photos/100'
+// alamat gambar disimpan di variable
 </script>
 
 <template>
-  <img :src="gJokor">
-  <!-- tanda ":" di depan src artinya nilainya diambil dari variable "gJokor",
-       bukan teks biasa. Tanpa ":" yang terbaca adalah tulisan "gJokor" -->
+  <img :src="gambar">
+  <!-- tanda ":" di depan src artinya nilainya diambil dari variable "gambar",
+       bukan teks biasa. Tanpa ":" yang terbaca adalah tulisan "gambar" -->
 </template>
 ```
 
@@ -316,15 +316,15 @@ h1 { color: teal; }
 
 ```vue
 <script setup>
-let nama = 'Joko'
-function ganti() { nama = 'Rusdi' }
+let nama = 'Adi'
+function ganti() { nama = 'Budi' }
 // nilai "nama" memang berubah di JavaScript...
 </script>
 
 <template>
   <p>{{ nama }}</p>
   <button @click="ganti">Ganti</button>
-  <!-- ...tapi tampilan tetap 'Amba', karena Vue tidak memantau variable biasa -->
+  <!-- ...tapi tampilan tetap 'Adi', karena Vue tidak memantau variable biasa -->
 </template>
 ```
 
@@ -335,8 +335,8 @@ function ganti() { nama = 'Rusdi' }
 ```js
 import { ref } from 'vue'
 // ambil fitur "ref" dari Vue
-const nama = ref('Amba')
-// bungkus nilai awal 'Amba' dengan ref, sekarang Vue memantau perubahannya
+const nama = ref('Adi')
+// bungkus nilai awal 'Adi' dengan ref, sekarang Vue memantau perubahannya
 ```
 
 - **Mental model:** `ref` adalah data yang perubahannya dipantau Vue.
@@ -346,7 +346,7 @@ const nama = ref('Amba')
 - **Di JavaScript pakai `.value`:**
 
 ```js
-nama.value = 'Rusdi'
+nama.value = 'Budi'
 // isi asli ada di dalam ".value", jadi ubah lewat sana
 ```
 
@@ -364,9 +364,9 @@ nama.value = 'Rusdi'
 ```vue
 <script setup>
 import { ref } from 'vue'
-const nama = ref('Amba')
+const nama = ref('Adi')
 // data yang dipantau Vue
-function ganti() { nama.value = 'Rusdi' }
+function ganti() { nama.value = 'Budi' }
 // di dalam JavaScript wajib pakai .value
 </script>
 
@@ -416,9 +416,9 @@ function sapa(nama) { alert('Halo, ' + nama) }
 </script>
 
 <template>
-  <button @click="sapa('Amba')">Sapa Amba</button>
-  <!-- kirim 'Amba' sebagai argument saat diklik -->
-  <button @click="sapa('Rusdi')">Sapa Rusdi</button>
+  <button @click="sapa('Adi')">Sapa Adi</button>
+  <!-- kirim 'Adi' sebagai argument saat diklik -->
+  <button @click="sapa('Budi')">Sapa Budi</button>
   <!-- function sama, argument beda, hasil beda -->
 </template>
 ```
@@ -575,7 +575,7 @@ function tambah() { buahBuahan.value.push('mangga') }
 ### 7.c `value`
 
 ```html
-<input type="text" value="Amba">
+<input type="text" value="Adi">
 <!-- isi awal input -->
 ```
 
@@ -624,7 +624,7 @@ const nama = ref('')
 ### 8.c Dua arah
 
 ```vue
-<button @click="nama = 'Rusdi'">Isi otomatis</button>
+<button @click="nama = 'Budi'">Isi otomatis</button>
 <!-- kita ubah data lewat kode, dan isi input ikut berubah.
      Itu yang disebut dua arah -->
 ```

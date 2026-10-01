@@ -7,11 +7,30 @@
 export const pertemuan = [
   {
     no: 1,
-    judul: 'JavaScript Dasar dan Pengenalan Vue',
-    deskripsi: 'Dari dasar JavaScript sampai tampilan interaktif dengan Vue: ref, event, v-if, v-for, v-model, form, dan component.',
-    murid: () => import('./pertemuan-01/murid.md?raw'),
-    pengajar: () => import('./pertemuan-01/pengajar.md?raw'),
+    judul: "Pengenalan Web",
+    deskripsi: "Pengenalan konsep Web dan html dasar",
+    murid: () => import("./Pengenalan-Web/murid.md?raw"),
+    pengajar: () => import("./Pengenalan-Web/pengajar.md?raw"),
   },
-  { no: 2, judul: 'Git & GitHub', deskripsi: 'Simpan, lacak, dan kerjakan kode bersama.', murid: null, pengajar: null },
-  { no: 3, judul: 'Backend Dasar', deskripsi: 'Server, API, dan database.', murid: null, pengajar: null },
-]
+  {
+    no: 2,
+    judul: "Web Lanjutan",
+    deskripsi: "Mendalami HTML, CSS, dan JS dasar",
+    murid: () => import("./HTML+CSS+JS/murid.md?raw"),
+    pengajar: () => import("./HTML+CSS+JS/pengajar.md?raw"),
+  },
+  {
+    no: 3,
+    judul: "Pengenalan Framework dan Setup Vue",
+    deskripsi: "Pengenalan framework Vue dan cara setup project.",
+    murid: () => import("./Setup-Vue/murid.md?raw"),
+    pengajar: () => import("./Setup-Vue/pengajar.md?raw"),
+  },
+  {
+    no: 4,
+    judul: "Vue dan JS dasar",
+    deskripsi: "Sedikit Mendalami Vue dan JavaScript dasar.",
+    murid: () => import("./Vue-JS-Dasar/murid.md?raw"),
+    pengajar: () => import("./Vue-JS-Dasar/pengajar.md?raw"),
+  },
+];
