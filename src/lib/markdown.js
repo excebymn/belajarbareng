@@ -3,9 +3,11 @@ import hljs from 'highlight.js/lib/core'
 import js from 'highlight.js/lib/languages/javascript'
 import xml from 'highlight.js/lib/languages/xml'
 import css from 'highlight.js/lib/languages/css'
+import json from 'highlight.js/lib/languages/json'
 hljs.registerLanguage('javascript', js)
 hljs.registerLanguage('xml', xml)
 hljs.registerLanguage('css', css)
+hljs.registerLanguage('json', json)
 hljs.registerAliases(['js'], { languageName: 'javascript' })
 hljs.registerAliases(['vue', 'html'], { languageName: 'xml' })
 
